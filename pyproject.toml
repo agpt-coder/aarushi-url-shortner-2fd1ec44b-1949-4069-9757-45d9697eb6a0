@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "aarushi-url-shortner-2"
+version = "0.1.0"
+description = "To implement a URL shortening service using the specified tech stack (Python, FastAPI, PostgreSQL, and Prisma ORM), the user needs to address several critical components. The service must accept a long URL as an input, generate a uniquely short alias for this URL, store the mapping between the alias and the original URL in a PostgreSQL database using Prisma ORM, and finally, return the shortened URL to the user. When this short URL is accessed, it should redirect the user to the original, long URL. Key considerations from the interview and research include ensuring the uniqueness of the short URL alias by utilizing a mixture of uppercase and lowercase letters, numbers, and possibly employing hash functions, while also avoiding ambiguous characters to prevent confusion. Additionally, the FastAPI framework will handle the redirection through the 'RedirectResponse' class, allowing for a seamless transition to the original URL when the short URL is accessed. Storing the URL mappings requires setting up a model in Prisma that includes at least the original URL and the generated short code, with enhanced functionality such as tracking capabilities as per the user's requirements. This project involves not just the development of a URL shortening functionality but also considerations for security, efficiency, and user experience."
+authors = ["AutoGPT <info@agpt.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = "^0.68.0"
+prisma = "*"
+pydantic = "*"
+uvicorn = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
